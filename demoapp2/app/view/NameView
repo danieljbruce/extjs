@@ -1,0 +1,28 @@
+Ext.define('demoapp2.view.NameViewModel', {
+    extend: 'Ext.app.ViewModel',
+    alias: 'viewmodel.namevm',
+});
+
+Ext.define('demoapp2.view.NameViewModel', {
+    extend: 'Ext.app.ViewModel',
+
+    alias: 'view.nameviewmodel',
+
+
+    stores: {
+        grid: {
+            storeId: 'gridStore',
+            fields: ['id', 'name', 'email'],
+            proxy: {
+                type: 'ajax',
+                url: '/app/view/main/users.json',
+                reader: {
+                    type: 'json',
+                    rootProperty: 'data',
+                    successProperty: 'success'
+                }
+            },
+            autoLoad:true
+        }
+    }
+});

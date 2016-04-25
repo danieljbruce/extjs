@@ -9,16 +9,15 @@ Ext.define('demoapp.view.main.List', {
         'demoapp.store.Personnel'
     ],
 
-    title: 'Personnel',
+    // title: 'Personnel',
 
     store: {
         type: 'personnel'
     },
 
     columns: [
-        { text: 'Name',  dataIndex: 'name', width: 100 },
-        { text: 'Email', dataIndex: 'email', width: 230 },
-        { text: 'Phone', dataIndex: 'phone', width: 150 }
+        { text: 'First Name',  dataIndex: 'First_Name', width: 100},
+        { text: 'Last Name', dataIndex: 'Last_Name', width: 100}
     ],
 
     listeners: {

@@ -5,7 +5,6 @@
  */
 Ext.define('demoapp.Application', {
     extend: 'Ext.app.Application',
-    
     name: 'demoapp',
 
     stores: [

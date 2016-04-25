@@ -1,3 +1,4 @@
+
 /**
  * This class is the main view for the application. It is specified in app.js as the
  * "mainView" property. That setting causes an instance of this class to be created and
@@ -5,16 +6,17 @@
  *
  * TODO - Replace this content of this view to suite the needs of your application.
  */
+ 
 Ext.define('demoapp.view.main.Main', {
     extend: 'Ext.tab.Panel',
     xtype: 'app-main',
 
     requires: [
         'Ext.MessageBox',
-
         'demoapp.view.main.MainController',
         'demoapp.view.main.MainModel',
-        'demoapp.view.main.List'
+        //'demoapp.view.main.List',
+		'demoapp.view.main.NameList'
     ],
 
     controller: 'main',
@@ -36,7 +38,7 @@ Ext.define('demoapp.view.main.Main', {
             layout: 'fit',
             // The following grid shares a store with the classic version's grid as well!
             items: [{
-                xtype: 'mainlist'
+                xtype: 'namelist'
             }]
         },{
             title: 'Users',

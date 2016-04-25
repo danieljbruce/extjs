@@ -1,0 +1,12 @@
+https://docs.sencha.com/cmd/5.x/extjs/cmd_app.html
+
+C:\Users\Daniel\Google Drive\Programming\Github\extjs\ext-6.0.2
+sencha generate app demoapp ../demoapp
+
+cd C:\Users\Daniel\Google Drive\Programming\Github\extjs\demoapp
+sencha app watch
+sencha app build
+sencha web start
+sencha web stop
+sencha help generate
+http://localhost:1841/ in browser

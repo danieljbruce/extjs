@@ -1,24 +1,25 @@
 /**
  * This view is an example list of people.
+ * Classic view
  */
+ 
 Ext.define('demoapp.view.main.List', {
-    extend: 'Ext.grid.Panel',
+    extend: 'Ext.grid.Grid',
     xtype: 'mainlist',
 
     requires: [
-        'demoapp.store.Personnel'
+        'demoapp.store.People'
     ],
 
-    title: 'Personnel',
+    // title: 'Personnel',
 
     store: {
-        type: 'personnel'
+        type: 'store.people'
     },
 
     columns: [
-        { text: 'Name',  dataIndex: 'name' },
-        { text: 'Email', dataIndex: 'email', flex: 1 },
-        { text: 'Phone', dataIndex: 'phone', flex: 1 }
+        { text: 'First Name', dataIndex: 'firstname', width: 100},
+        { text: 'Last Name', dataIndex: 'lastname', width: 100}
     ],
 
     listeners: {
