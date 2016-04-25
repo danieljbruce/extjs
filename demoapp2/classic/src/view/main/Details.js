@@ -1,9 +1,9 @@
 /**
  * This view is an example list of people.
  */
-Ext.define('demoapp2.view.main.List', {
+Ext.define('demoapp2.view.main.Details', {
     extend: 'Ext.grid.Panel',
-    xtype: 'mainlist',
+    xtype: 'details',
 
     requires: [
         'demoapp2.store.People'
