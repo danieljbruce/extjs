@@ -1,3 +1,4 @@
+/*
 var store = Ext.create('Ext.data.ArrayStore', {
     // store configs
     autoDestroy: true,
@@ -79,3 +80,5 @@ Ext.define('MyApp.view.MyViewport', {
     ]
  
 });
+
+*/

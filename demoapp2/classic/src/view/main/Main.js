@@ -122,8 +122,8 @@ Ext.define('demoapp2.view.main.Main', {
 
         'demoapp2.view.main.MainController',
         'demoapp2.view.main.MainModel',
-        'demoapp2.view.main.List' //,
-        //'demoapp2.view.main.Details'
+        'demoapp2.view.main.List', //,
+        'demoapp2.view.main.Details'
     ],
 
     layout: {
@@ -139,14 +139,14 @@ Ext.define('demoapp2.view.main.Main', {
     //title: 'Container Panel',
     items: [
         {
-            xtype: 'mainlist',
+            xtype: 'mainlist', // Left Panel
             // title: 'Child Panel 1',
             height: '100%',
             width: 200
         },
         {
-            xtype: 'details',
-            title: 'Child Panel 2',
+            xtype: 'details', // Right Panel
+            //title: 'Child Panel 2',
             height: '100%',
             width: '100%'
         }

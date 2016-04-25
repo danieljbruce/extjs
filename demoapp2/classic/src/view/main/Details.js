@@ -1,6 +1,8 @@
 /**
  * This view is an example list of people.
  */
+
+ 
 Ext.define('demoapp2.view.main.Details', {
     extend: 'Ext.grid.Panel',
     xtype: 'details',
@@ -17,14 +19,16 @@ Ext.define('demoapp2.view.main.Details', {
 
     columns: [
         { text: 'First Name',  dataIndex: 'firstname' },
-        { text: 'Last Name', dataIndex: 'lastname'} //, flex: 1 },
-        //{ text: 'Phone', dataIndex: 'phone'} //, flex: 1 }
+        { text: 'Last Name', dataIndex: 'lastname'}, //, flex: 1 },
+        { text: 'Phone', dataIndex: 'lastname'} //, flex: 1 }
     ],
 
     listeners: {
         select: 'onItemSelected'
     }
 });
+
+
 
 /*
 Ext.define('demoapp2.view.main.List', {
