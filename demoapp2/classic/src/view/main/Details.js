@@ -1,55 +1,101 @@
-/**
- * This view is an example list of people.
- */
-
- 
 Ext.define('demoapp2.view.main.Details', {
     extend: 'Ext.form.Panel',
     xtype: 'details',
-
+    alias: 'viewdetails',
     //title: 'User Form',
     height: '100%',
     width: '100%',
     bodyPadding: 20,
     defaultType: 'textfield',
+    controller: 'details',
+
+    requires: [
+        'demoapp2.view.main.DetailsFormController'
+    ],
+
     items: [
         {
+            id: 'firstnametext', // This is where users can change the first name.
+            xtype: 'textfield',
             fieldLabel: 'First Name',
-            width: '100%',
-            name: 'firstnameinput' // This is where users can change the first name.
+            width: '100%'            
         },
         {
+            id: 'lastnametext', // This is where users can change the last name.
+            xtype: 'textfield',
             fieldLabel: 'Last Name',
-            width: '100%',
-            name: 'lastnameinput' // This is where users can change the last name.
+            width: '100%' 
         },
         {
+            id: 'notestext', // This is where users can change the first name.
             xtype: 'textareafield',
             //fieldLabel: 'Date of Birth',
             width: '100%',
+            height: 200,
             name: 'notesinput'
         },
         {
+            id: 'savebutton', // This is where users can change the first name.
+            name: 'savebutton',
+            alias: 'savebutton',
             xtype: 'button',
             text: 'Save',
-            itemId: 'save',
-            iconCls: 'save'
+            iconCls: 'save',
+            handler: 'onSaveClicked'
         },
         {
+            id: 'cancelbutton', // This is where users can change the first name.
+            name: 'cancelbutton',
+            alias: 'cancelbutton',
+            handler: 'onCancelClicked',
             xtype: 'button',
             text: 'Cancel',
-            itemId: 'cancel',
             iconCls: 'cancel'
         }
+    ], 
 
-        
+    listeners: {
+        select: 'onItemSelected'
+    }
+    
+});
+
+/*
+Ext.define('demoapp2.controller.SaveButtonController', {
+    extend: 'Ext.app.ViewController',
+    alias: 'controller.savebutton',
+    onSaveClick: function (argS) {
+        alert("Softmore");
+        // called by 'change' event
+    }
+});
+*/
         /*
         {
             xtype: 'textareafield',
             //fieldLabel: 'Date of Birth',
             name: 'notesinput'
         } */
+
+/*
+    requires: [
+        'demoapp2.store.People'
     ],
+
+    title: 'Personnel',
+
+    store: {
+        type: 'people'
+    },
+
+    columns: [
+        { text: 'First Name',  dataIndex: 'firstname' },
+        { text: 'Last Name', dataIndex: 'lastname'}, //, flex: 1 },
+        { text: 'Phone', dataIndex: 'lastname'} //, flex: 1 }
+    ],
+*/
+
+/*,
     buttons: [
         {
             text: 'Ok',
@@ -87,56 +133,12 @@ Ext.define('demoapp2.view.main.Details', {
                 }
             }
         }        
-    ]
-/*
-    requires: [
-        'demoapp2.store.People'
     ],
 
-    title: 'Personnel',
-
-    store: {
-        type: 'people'
-    },
-
-    columns: [
-        { text: 'First Name',  dataIndex: 'firstname' },
-        { text: 'Last Name', dataIndex: 'lastname'}, //, flex: 1 },
-        { text: 'Phone', dataIndex: 'lastname'} //, flex: 1 }
-    ],
-*/
-    /*
-    listeners: {
-        select: 'onItemSelected'
-    }
-    */
-});
-
-
-
-/*
-Ext.define('demoapp2.view.main.List', {
-    extend: 'Ext.grid.Panel',
-    xtype: 'mainlist',
-
-    requires: [
-        'demoapp2.store.Personnel'
-    ],
-
-     title: 'Personnel', 
-
-    store: {
-        type: 'personnel'
-    },
-
-    columns: [
-        { text: 'Name',  dataIndex: 'name' },
-        { text: 'Email', dataIndex: 'email'}, //, flex: 1 },
-        { text: 'Phone', dataIndex: 'phone'} //, flex: 1 }
-    ],
-
-    listeners: {
-        select: 'onItemSelected'
-    }
-});
-*/
+    defaults: {
+        listeners: {
+            change: function(field, newVal, oldVal) {
+                console.log('change');
+            }
+        },
+    } */

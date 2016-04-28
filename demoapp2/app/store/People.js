@@ -1,18 +1,31 @@
 Ext.define('demoapp2.store.People', {
-    extend: 'Ext.data.Store',
+    extend: 'Ext.data.ArrayStore',
 
     alias: 'store.people',
-
-    fields: [
-        'firstname', 'lastname'
-    ],
+    model: 'Person',
+    storeId: 'People',
 
     data: { items: [
-        { firstname: 'Joe', lastname: "Developer"},
-        { firstname: 'John', lastname: "Doe"},
-        { firstname: 'Jane', lastname: "Doe"},
-        { firstname: 'Henry', lastname: "Smith"},
-        { firstname: 'William', lastname: "Shatner"}
+        { firstname: 'Joe', lastname: "Developer", notes: ""},
+        { firstname: 'John', lastname: "Doe", notes: ""},
+        { firstname: 'Jane', lastname: "Doe", notes: ""},
+        { firstname: 'Henry', lastname: "Smith", notes: ""},
+        { firstname: 'William', lastname: "Shatner", notes: ""},
+        { firstname: '', lastname: '', notes: ''},
+        { firstname: '', lastname: '', notes: ''},
+        { firstname: '', lastname: '', notes: ''},
+        { firstname: '', lastname: '', notes: ''},
+        { firstname: '', lastname: '', notes: ''},
+        { firstname: '', lastname: '', notes: ''},
+        { firstname: '', lastname: '', notes: ''},
+        { firstname: '', lastname: '', notes: ''},
+        { firstname: '', lastname: '', notes: ''},
+        { firstname: '', lastname: '', notes: ''},
+        { firstname: '', lastname: '', notes: ''},
+        { firstname: '', lastname: '', notes: ''},
+        { firstname: '', lastname: '', notes: ''},
+        { firstname: '', lastname: '', notes: ''},
+        { firstname: '', lastname: '', notes: ''}
     ]},
 
     proxy: {

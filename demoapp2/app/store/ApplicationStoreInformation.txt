@@ -1,0 +1,6 @@
+// This file contains documentation for stores:
+//
+// The stores that the program maintains include:
+// A store for the grid array [firstname, lastname, notes]
+// A store for the item index selected in the grid array - Already given by the grid in the view or view model
+// A store for the firstname, lastname, notes - Already given by the form in the view or view model

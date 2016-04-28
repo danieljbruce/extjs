@@ -1,0 +1,18 @@
+Ext.define('Fiddle.controller.ButtonsController', {
+    extend: 'Ext.app.Controller',
+
+    config: {
+        refs: {
+            button: 'buttonsview button'
+        },
+        control: {
+            button: {
+                tap: 'onButtonTap'
+            }
+        }
+    },
+
+    onButtonTap: function(button) {
+        button.setText('Voted');
+    }
+});
